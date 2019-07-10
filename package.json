@@ -17,5 +17,12 @@
   "bugs": {
     "url": "https://github.com/jmschindele/news_scraper/issues"
   },
-  "homepage": "https://github.com/jmschindele/news_scraper#readme"
+  "homepage": "https://github.com/jmschindele/news_scraper#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "cheerio": "^1.0.0-rc.3",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.0",
+    "morgan": "^1.9.1"
+  }
 }
