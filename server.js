@@ -29,8 +29,9 @@ app.use(express.json());
 //make a public static folder
 app.use(express.static("public"));
 
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/newsScraper";
 //connect to the Mongo DB
-mongoose.connect("mongodb://localhost/newsScraper", { useNewUrlParser: true });
+mongoose.connect(MONGODB_URI);
 
 //Routes
 
@@ -91,7 +92,7 @@ app.get("/articles/:id", function(req, res) {
     });
 });
 
-app.post("/articles%20:id", function(req, res) {
+app.post("/articles/:id", function(req, res) {
   db.Comment.create(req.body)
     .then(function(dbComment) {
       return db.Article.findOneAndUpdate(
