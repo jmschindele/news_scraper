@@ -27,7 +27,11 @@ app.use(
 );
 app.use(express.json());
 //make a public static folder
-app.use(express.static("public"));
+// app.use(express.static("public"));
+
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"));
+  }
 
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/newsScraper";
 //connect to the Mongo DB
