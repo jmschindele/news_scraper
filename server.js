@@ -27,7 +27,7 @@ app.use(
 );
 app.use(express.json());
 //make a public static folder
-// app.use(express.static("public"));
+app.use(express.static("public"));
 
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
@@ -38,6 +38,10 @@ var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/newsScraper";
 mongoose.connect(MONGODB_URI);
 
 //Routes
+
+// app.get("/", function(req, res){
+
+// })
 
 //A GET route for scraping Wired.com
 app.get("/scrape", function(req, res) {
