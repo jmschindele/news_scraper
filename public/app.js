@@ -29,7 +29,7 @@ $(document).on("click", "div.article-card", function(){
         // A textarea to add a new note body
         $('#comments').append("<textarea class='form-control my-1' place-holder='Comment' rows='4' id='bodyinput' name='title'>");
         // A button to submit a new note, wiuth the id of the article saved to it
-        $('#comments').append("<button class='btn btn-success float-right my-2' data-id=' " + data._id + " ' id='savecomment'> Save Comment</ button>");
+        $('#comments').append("<button class='btn btn-success float-right my-2' data-id='" + data._id + "' id='savecomment'> Save Comment</ button>");
 
         if (data.comment) {
             $('#titleinput').val(data.comment.title);
@@ -43,7 +43,7 @@ $(document).on("click", "div.article-card", function(){
 $(document).on('click', '#savecomment', function(e) {
     e.preventDefault();
     var thisId = $(this).attr('data-id');
-
+    console.log('this id is ',thisId)
     $.ajax({
         method: "POST",
         url: "/articles/" + thisId,
