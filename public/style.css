@@ -1,6 +1,37 @@
+.jumbotron {
+    background-image: url(./images/beige-tiles.png);
+    box-shadow: 0px 0px 10px 2px darkslategray;
+}
+.container{
+    background-color: grey;
+    border-left: solid 6px orange;
+    border-right: solid 6px orange;
+    box-shadow: 
+    inset 0px 10px 0px 3px black;
+    padding-top: 20px;
+    margin-top: 0px;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translatex(-50%);
+    min-height: 110vh;
+}
+.jumbotron h1 { 
+color: darkslategray;
+font-size: 5em;
+}
+
+h2 {
+    color: white;
+    text-shadow: 2px 2px black,
+    -2px 2px black,
+    2px -2px black,
+    -2px -2px black;
+}
 
 body {
-    background-color:grey;
+    background-color: midnightblue;
+    overflow: hidden;
 }
 
 #wrapper {
@@ -35,4 +66,25 @@ input {
 textarea {
     height: 200px;
     font-size: 18px;
+}
+
+.article-card {
+    background: lightgray;
+    border: solid 2px darkslategray;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.article-card:hover {
+    box-shadow: 0px 0px 10px 3px rgb(94, 94, 94);
+    transform: scale(1.05);
+    margin: 10px;
+}
+
+.form-control, .btn {
+    border: solid 2px darkslategrey;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
